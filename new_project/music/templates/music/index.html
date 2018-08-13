@@ -1,0 +1,11 @@
+{% if data %}
+<h2>Here you go....</h2>
+   <ul>
+    {% for album in data %}
+      <li><a href="/music/{{ album.id }}/">{{ album.album_title }}</li>
+   
+   {% endfor %}
+</ul> 
+{% else %}
+   <h2>You don't have any albums to display</h2>
+{% endif %}   
